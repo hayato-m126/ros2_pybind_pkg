@@ -10,8 +10,6 @@ find_package(ament_cmake_auto REQUIRED)
 find_package(ament_cmake_python REQUIRED)
 ament_auto_find_build_dependencies()
 
-find_package(pybind11 REQUIRED)
-
 include_directories(
   include
 )
@@ -19,7 +17,6 @@ include_directories(
 ament_auto_add_library(listener_component SHARED
   src/listener_component.cpp
 )
-target_link_libraries(listener_component pybind11::embed)
 rclcpp_components_register_node(listener_component
   PLUGIN "ros2_pybind_pkg::Listener"
   EXECUTABLE listener_node
