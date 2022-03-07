@@ -7,14 +7,14 @@ def generate_launch_description():
 
     # listener node
     listener_node = Node(
-        package="ros2_pybind_pkg",
+        package="pybind_demo",
         executable="listener_node",
         output="screen",
         name="listner",
     )
 
     talker_node = Node(
-        package="ros2_pybind_pkg",
+        package="pybind_demo",
         executable="talker.py",
         output="screen",
         name="talker",

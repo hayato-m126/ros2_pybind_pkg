@@ -15,15 +15,15 @@
 #ifndef PYBIND__LISTENER_COMPONENT_HPP_
 #define PYBIND__LISTENER_COMPONENT_HPP_
 
+#include "pybind_demo/visiblity_control.hpp"
+
 #include <rclcpp/rclcpp.hpp>
 
 #include <std_msgs/msg/string.hpp>
 
-#include <pybind_pkg/visiblity_control.h>
-
 #include <string>
 
-namespace ros2_pybind_pkg
+namespace pybind_demo
 {
 class ListenerComponent : public rclcpp::Node
 {
@@ -36,6 +36,6 @@ public:
 private:
   rclcpp::Subscription<std_msgs::msg::String>::SharedPtr sub_;
 };
-}  // namespace ros2_pybind_pkg
+}  // namespace pybind_demo
 
 #endif  // PYBIND_LISTENER_COMPONENT_HPP_

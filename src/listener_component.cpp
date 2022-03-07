@@ -1,10 +1,10 @@
-#include <pybind_pkg/listener_component.hpp>
+#include <pybind_demo/listener_component.hpp>
 #include <rclcpp_components/register_node_macro.hpp>
 
 #include <iostream>
 #include <memory>
 
-namespace ros2_pybind_pkg
+namespace pybind_demo
 {
 // Create a Listener class that subclasses the generic rclcpp::Node base class.
 // The main function below will instantiate the class as a ROS node.
@@ -28,6 +28,6 @@ void ListenerComponent::chatterCallback(const std_msgs::msg::String::SharedPtr m
   // py::print("py print");
 }
 // py::module cowsay;
-}  // namespace ros2_pybind_pkg
+}  // namespace pybind_demo
 
-RCLCPP_COMPONENTS_REGISTER_NODE(ros2_pybind_pkg::ListenerComponent)
+RCLCPP_COMPONENTS_REGISTER_NODE(pybind_demo::ListenerComponent)

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(ros2_pybind_pkg)
+project(pybind_demo)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
@@ -18,7 +18,7 @@ ament_auto_add_library(listener_component SHARED
   src/listener_component.cpp
 )
 rclcpp_components_register_node(listener_component
-  PLUGIN "ros2_pybind_pkg::Listener"
+  PLUGIN "pybind_demo::Listener"
   EXECUTABLE listener_node
 )
 
